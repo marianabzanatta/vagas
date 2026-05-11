@@ -1018,6 +1018,11 @@
                 </select>
               </div>
 
+              <div class="form-group">
+                <label>Pretensão salarial aproximada <span>*</span></label>
+                <input type="text" id="pretensao" placeholder="Ex: R$ 3.000 – R$ 4.000" required />
+              </div>
+
               <button type="submit" class="form-submit" id="btn-submit">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1056,7 +1061,8 @@
               whatsapp:    document.getElementById('whatsapp').value,
               cidade:      document.getElementById('cidade').value,
               linkedin:    document.getElementById('linkedin').value,
-              experiencia: document.getElementById('experiencia').value
+              experiencia: document.getElementById('experiencia').value,
+              pretensao:   document.getElementById('pretensao').value
             };
 
             try {
