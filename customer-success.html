@@ -1095,18 +1095,13 @@
             };
 
             try {
-              const res = await fetch(SCRIPT_URL, {
+              await fetch(SCRIPT_URL, {
                 method: 'POST',
+                mode: 'no-cors',
                 body: JSON.stringify(payload)
               });
-              const json = await res.json();
-
-              if (json.ok) {
-                form.style.display = 'none';
-                successBox.classList.add('show');
-              } else {
-                throw new Error(json.error || 'Erro desconhecido');
-              }
+              form.style.display = 'none';
+              successBox.classList.add('show');
             } catch (err) {
               btn.disabled = false;
               btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Enviar candidatura';

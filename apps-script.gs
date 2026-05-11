@@ -63,6 +63,10 @@ function obterOuCriarPasta(nome) {
   return pastas.hasNext() ? pastas.next() : DriveApp.createFolder(nome);
 }
 
+function doGet(e) {
+  return resposta({ ok: true, msg: 'endpoint ativo' });
+}
+
 function resposta(obj) {
   return ContentService
     .createTextOutput(JSON.stringify(obj))
