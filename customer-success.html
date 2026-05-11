@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analista de Customer Success | dgenny®</title>
+  <meta name="description" content="Venha construir o futuro das compras B2B com a gente. Vaga de Analista de Customer Success — 100% remoto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azul:  #121325;
+      --roxo:  #6660B4;
+      --rosa:  #FFBEF5;
+      --white: #FFFFFF;
+      --gray-50:  #F8F8FC;
+      --gray-100: #F0EFF8;
+      --gray-200: #E2E1F0;
+      --gray-400: #9896C0;
+      --gray-600: #5A5880;
+      --font-title: 'Montserrat', Arial, sans-serif;
+      --font-body:  'Quicksand', Arial, sans-serif;
+      --radius: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--gray-50);
+      color: var(--azul);
+      line-height: 1.65;
+    }
+
+    /* ── HEADER ───────────────────────── */
+    .site-header {
+      background: var(--azul);
+      padding: 0 32px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(18,19,37,.4);
+    }
+
+    .site-header img.logo { height: 30px; display: block; }
+
+    .header-link {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--rosa);
+      text-decoration: none;
+      letter-spacing: .02em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      opacity: .85;
+      transition: opacity .2s;
+    }
+    .header-link:hover { opacity: 1; }
+
+    /* ── HERO ─────────────────────────── */
+    .hero {
+      background: var(--azul);
+      padding: 64px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 65% 55% at 85% 20%, rgba(102,96,180,.28) 0%, transparent 70%),
+        radial-gradient(ellipse 45% 40% at 15% 80%, rgba(255,190,245,.09) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-inner { position: relative; max-width: 700px; margin: 0 auto; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--rosa);
+      background: rgba(255,190,245,.1);
+      border: 1px solid rgba(255,190,245,.25);
+      border-radius: 100px;
+      padding: 5px 14px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.18;
+      letter-spacing: -.02em;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--rosa);
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 38px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 100px;
+      padding: 6px 14px;
+      white-space: nowrap;
+    }
+    .tag-outline {
+      color: var(--gray-200);
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.05);
+    }
+    .tag-purple {
+      color: var(--white);
+      background: rgba(102,96,180,.55);
+      border: 1px solid rgba(102,96,180,.75);
+    }
+    .tag-pink {
+      color: var(--azul);
+      background: var(--rosa);
+      border: 1px solid var(--rosa);
+      font-weight: 700;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--roxo);
+      color: var(--white);
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      border-radius: 100px;
+      padding: 15px 34px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 6px 24px rgba(102,96,180,.5);
+    }
+    .hero-cta:hover {
+      background: #5550A0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(102,96,180,.6);
+    }
+
+    /* ── PAGE LAYOUT ──────────────────── */
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    @media (max-width: 780px) {
+      .page-wrapper { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
+    }
+
+    /* ── CARDS ────────────────────────── */
+    .main-content { display: flex; flex-direction: column; gap: 24px; }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      padding: 32px;
+      box-shadow: 0 2px 10px rgba(18,19,37,.04);
+      animation: fadeUp .4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-title {
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-title-accent {
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--roxo);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    .card p strong { color: var(--azul); font-weight: 700; }
+
+    .list-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .list-items li {
+      font-size: 15px;
+      color: var(--gray-600);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.65;
+    }
+
+    .list-items li .bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--roxo);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .list-items.check li .bullet {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(102,96,180,.12);
+      position: relative;
+      margin-top: 2px;
+    }
+    .list-items.check li .bullet::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%236660B4' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px no-repeat;
+    }
+
+    /* ── BENEFITS ─────────────────────── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 4px;
+    }
+
+    .benefit-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .benefit-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(102,96,180,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .benefit-icon img {
+      width: 18px;
+      height: 18px;
+      filter: invert(38%) sepia(72%) saturate(400%) hue-rotate(210deg) brightness(85%);
+    }
+
+    .benefit-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      line-height: 1.4;
+    }
+
+    /* ── PROCESS STEPS ────────────────── */
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      position: relative;
+    }
+
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 40px;
+      width: 2px;
+      height: calc(100% - 8px);
+      background: var(--gray-200);
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(102,96,180,.12);
+      border: 2px solid var(--roxo);
+      color: var(--roxo);
+      font-family: var(--font-title);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      background: var(--white);
+    }
+
+    .step-body {
+      padding: 6px 0 24px;
+    }
+
+    .step-title {
+      font-family: var(--font-title);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 3px;
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+
+    /* ── FORM SECTION ─────────────────── */
+    .form-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(18,19,37,.04);
+    }
+
+    .form-header {
+      background: var(--azul);
+      padding: 28px 32px;
+    }
+
+    .form-header-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--rosa);
+      margin-bottom: 8px;
+    }
+
+    .form-header h2 {
+      font-family: var(--font-title);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .form-header p {
+      font-size: 14px;
+      color: var(--gray-400);
+      margin-top: 8px;
+    }
+
+    .form-iframe-wrap {
+      padding: 0;
+      background: var(--white);
+    }
+
+    .form-iframe-wrap iframe {
+      width: 100%;
+      border: none;
+      display: block;
+      min-height: 700px;
+    }
+
+    /* ── SIDEBAR ──────────────────────── */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 80px; }
+
+    .sidebar-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(18,19,37,.04);
+      animation: fadeUp .4s ease both;
+    }
+
+    .apply-card {
+      background: var(--azul);
+      border-color: transparent;
+    }
+
+    .apply-card .apply-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--rosa);
+      margin-bottom: 8px;
+    }
+
+    .apply-card .apply-title {
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 20px;
+    }
+
+    .btn-apply {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--roxo);
+      color: var(--white);
+      font-family: var(--font-title);
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      border-radius: 100px;
+      padding: 13px 20px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      box-shadow: 0 4px 20px rgba(102,96,180,.4);
+    }
+    .btn-apply:hover { background: #5550A0; transform: translateY(-1px); }
+
+    .apply-note {
+      font-size: 11px;
+      color: var(--gray-400);
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .job-detail-list { display: flex; flex-direction: column; gap: 14px; }
+
+    .job-detail-item { display: flex; align-items: center; gap: 12px; }
+
+    .job-detail-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .job-detail-icon img {
+      width: 17px;
+      height: 17px;
+      filter: invert(38%) sepia(72%) saturate(400%) hue-rotate(210deg) brightness(85%);
+    }
+
+    .job-detail-info { flex: 1; }
+
+    .job-detail-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--gray-400);
+      margin-bottom: 2px;
+    }
+
+    .job-detail-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--azul);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    /* ── SHARE ────────────────────────── */
+    .share-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--gray-400);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .share-btns { display: flex; gap: 8px; justify-content: center; }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 100px;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background .2s;
+    }
+
+    .share-btn-linkedin {
+      color: var(--roxo);
+      background: rgba(102,96,180,.1);
+    }
+    .share-btn-linkedin:hover { background: rgba(102,96,180,.2); }
+
+    .share-btn-whatsapp {
+      color: #25D366;
+      background: rgba(37,211,102,.08);
+    }
+    .share-btn-whatsapp:hover { background: rgba(37,211,102,.18); }
+
+    /* ── BOTTOM CTA ───────────────────── */
+    .bottom-cta {
+      background: var(--azul);
+      padding: 56px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bottom-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(102,96,180,.2) 0%, transparent 70%);
+    }
+
+    .bottom-cta-inner { position: relative; max-width: 560px; margin: 0 auto; }
+
+    .bottom-cta img.logo { height: 28px; margin: 0 auto 20px; display: block; opacity: .9; }
+
+    .bottom-cta h2 {
+      font-family: var(--font-title);
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .bottom-cta p {
+      font-size: 15px;
+      color: var(--gray-400);
+      margin-bottom: 28px;
+    }
+
+    /* ── FOOTER ───────────────────────── */
+    footer {
+      background: #0C0D1A;
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--gray-400);
+    }
+
+    footer a { color: var(--roxo); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ───────────────────── */
+    @media (max-width: 480px) {
+      .hero { padding: 44px 20px 40px; }
+      .card, .sidebar-card { padding: 22px 18px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .site-header { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <img
+      src="../.claude/skills/dgenny-branding/asset/logo/SVG/1-dgenny_Logotipo_Principal.svg"
+      alt="dgenny®"
+      class="logo"
+    />
+    <a href="https://dgenny.com.br" class="header-link">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M8.5 1.5L3 7l5.5 5.5" stroke="#FFBEF5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sobre a dgenny
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <circle cx="5" cy="5" r="4" stroke="#FFBEF5" stroke-width="1.2"/>
+          <circle cx="5" cy="5" r="1.5" fill="#FFBEF5"/>
+        </svg>
+        Vaga aberta · Customer Success
+      </div>
+
+      <h1>Analista de<br /><em>Customer Success</em></h1>
+
+      <div class="hero-tags">
+        <span class="tag tag-purple">100% Remoto</span>
+        <span class="tag tag-outline">CLT</span>
+        <span class="tag tag-outline">Tempo integral</span>
+        <span class="tag tag-outline">Brasil</span>
+        <span class="tag tag-pink">Startup em crescimento 🚀</span>
+      </div>
+
+      <a href="#candidatar" class="hero-cta">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Quero me candidatar
+      </a>
+    </div>
+  </section>
+
+  <!-- PAGE -->
+  <div class="page-wrapper">
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <!-- SOBRE A DGENNY -->
+      <article class="card">
+        <h2 class="card-title">
+          <span class="card-title-accent"></span>
+          Conheça a dgenny®
+        </h2>
+        <p>
+          A <strong>dgenny®</strong> é uma empresa de tecnologia baseada em Florianópolis, inovadora em IA para compras B2B. Estamos revolucionando como as empresas — hoje com foco em construtoras — fazem o processo de compras de forma muito mais facilitada e integrada ao seu ERP, usando nossa inteligência artificial.
+        </p>
+        <p>
+          Agilidade, eficiência e redução de custos comprovada com dezenas de clientes. Somos uma empresa early stage, com investimentos para crescermos <strong>250% apenas em 2026</strong>.
+        </p>
+        <p>
+          Por isso buscamos pessoas com perfil de construção: conhecer nossos clientes e suas dores, trabalhar melhorias de retenção e oportunidades de crescimento da base, e apoiar na construção de novos processos, rotinas e insights é chave para seguirmos crescendo. Se esse desafio te empolga, venha fazer parte do time!
+        </p>
+      </article>
+
+      <!-- SOBRE A VAGA -->
+      <article class="card">
+        <h2 class="card-title">
+          <span class="card-title-accent"></span>
+          Qual será seu papel?
+        </h2>
+        <p>
+          Apoiar nossos clientes durante toda a sua jornada, garantindo um bom processo de onboarding, adoção contínua da ferramenta e atuação proativa em casos de risco e cancelamento.
+        </p>
+        <p>
+          Aqui o CS não é atendimento reativo — é estratégia. Você vai entender profundamente a operação de cada cliente, identificar oportunidades de melhoria e ser o guardião do sucesso da jornada de compras deles.
+        </p>
+      </article>
+
+      <!-- DIA A DIA -->
+      <article class="card">
+        <h2 class="card-title">
+          <span class="card-title-accent"></span>
+          Como será seu dia a dia
+        </h2>
+        <ul class="list-items">
+          <li><span class="bullet"></span>Criar um relacionamento amigável e profissional com os clientes</li>
+          <li><span class="bullet"></span>Acolher clientes no dia 1 e garantir o setup correto da ferramenta e suas integrações</li>
+          <li><span class="bullet"></span>Treinar equipes de compra do cliente na plataforma</li>
+          <li><span class="bullet"></span>Monitorar adoção e resolver barreiras de uso</li>
+          <li><span class="bullet"></span>Identificar e criar oportunidades de negócio e expansão</li>
+          <li><span class="bullet"></span>Realizar re-treinamentos com clientes quando necessário</li>
+          <li><span class="bullet"></span>Monitorar e reverter casos de churn</li>
+          <li><span class="bullet"></span>Apoiar na construção de processos internos de CS (health score, playbooks, rotinas)</li>
+          <li><span class="bullet"></span>Gerar insights contínuos de melhoria para Produto e Vendas</li>
+        </ul>
+      </article>
+
+      <!-- REQUISITOS -->
+      <article class="card">
+        <h2 class="card-title">
+          <span class="card-title-accent"></span>
+          Para fazer esse show acontecer, precisamos que você domine
+        </h2>
+        <ul class="list-items check">
+          <li><span class="bullet"></span>Experiência anterior em Customer Success / pós-vendas (mínimo 1 ano)</li>
+          <li><span class="bullet"></span>Boa comunicação oral e escrita</li>
+          <li><span class="bullet"></span>Gostar de trabalhar com metas e gerar resultados</li>
+          <li><span class="bullet"></span>Autonomia para resolver problemas com agilidade</li>
+          <li><span class="bullet"></span>Perfil analítico: gosta de olhar dados para tomar decisões</li>
+          <li><span class="bullet"></span>Perfil de construção e inovação</li>
+          <li><span class="bullet"></span>Organização e gestão de múltiplas prioridades</li>
+          <li><span class="bullet"></span>Aberto a aprender e usar IA no dia a dia — somos AI native em tudo!</li>
+        </ul>
+      </article>
+
+      <!-- DIFERENCIAIS -->
+      <article class="card">
+        <h2 class="card-title">
+          <span class="card-title-accent"></span>
+          Se você quiser se diferenciar
+        </h2>
+        <ul class="list-items">
+          <li><span class="bullet"></span>Experiência em construção / supply chain</li>
+          <li><span class="bullet"></span>Conhecimento de ERP (Totvs, Senior ou similares)</li>
+          <li><span class="bullet"></span>Familiaridade com WhatsApp Business API</li>
+          <li><span class="bullet"></span>Experiência em startups em crescimento</li>
+          <li><span class="bullet"></span>Contato com produtos AI-native</li>
+        </ul>
+      </article>
+
+      <!-- BENEFÍCIOS -->
+      <article class="card">
+        <h2 class="card-title">
+          <span class="card-title-accent"></span>
+          Por que trabalhar na dgenny?
+        </h2>
+        <div class="benefits-grid">
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/monitor.svg" alt="" />
+            </div>
+            <span class="benefit-text">Cultura 100% remota</span>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/invoice.svg" alt="" />
+            </div>
+            <span class="benefit-text">CLT + benefícios + comissão por resultado</span>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/arrow-up-right-lg.svg" alt="" />
+            </div>
+            <span class="benefit-text">Empresa com crescimento de 250% em 2026</span>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/tick-circle.svg" alt="" />
+            </div>
+            <span class="benefit-text">Sem burocracia, decisões rápidas</span>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/chat-bubble.svg" alt="" />
+            </div>
+            <span class="benefit-text">Sua voz (e de seus clientes) importa :)</span>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/microchip.svg" alt="" />
+            </div>
+            <span class="benefit-text">Ambiente AI-native, sempre à frente</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- PROCESSO SELETIVO -->
+      <article class="card">
+        <h2 class="card-title">
+          <span class="card-title-accent"></span>
+          Processo seletivo
+        </h2>
+        <div class="process-steps">
+
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <div class="step-title">Triagem de perfil</div>
+              <div class="step-desc">Análise do formulário e currículo pelo time</div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <div class="step-title">Entrevista inicial — 60 min</div>
+              <div class="step-desc">Bate-papo com fit cultural + perguntas técnicas</div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <div class="step-title">Entrevista final — 30 a 60 min</div>
+              <div class="step-desc">Conversa aprofundada com liderança</div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-body">
+              <div class="step-title">Oferta</div>
+              <div class="step-desc">Proposta salarial e início de onboarding</div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- FORMULÁRIO DE CANDIDATURA -->
+      <div class="form-section" id="candidatar">
+        <div class="form-header">
+          <div class="form-header-label">Candidatura</div>
+          <h2>Esperamos te ter na dgenny para crescermos ainda mais!</h2>
+          <p>Preencha o formulário abaixo. Retornamos em até 5 dias úteis.</p>
+        </div>
+        <div class="form-iframe-wrap">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeMLLDz8WypfksXJSO4AEUHp8SieS6fabPt_dFDnFk90VUuBw/viewform?embedded=true"
+            title="Formulário de candidatura dgenny® — Analista de Customer Success"
+            loading="lazy"
+          >
+            Carregando formulário…
+          </iframe>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- APPLY CARD -->
+      <div class="sidebar-card apply-card">
+        <div class="apply-eyebrow">Vaga aberta agora</div>
+        <div class="apply-title">Pronto para transformar compras B2B com a gente?</div>
+        <a href="#candidatar" class="btn-apply">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M2.5 7.5h10M8 3.5l4 4-4 4" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Quero me candidatar
+        </a>
+        <p class="apply-note">Formulário rápido · Retorno em até 5 dias úteis</p>
+      </div>
+
+      <!-- JOB DETAILS -->
+      <div class="sidebar-card">
+        <div class="job-detail-list">
+
+          <div class="job-detail-item">
+            <div class="job-detail-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/user.svg" alt="" />
+            </div>
+            <div class="job-detail-info">
+              <div class="job-detail-label">Área</div>
+              <div class="job-detail-value">Customer Success</div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="job-detail-item">
+            <div class="job-detail-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/monitor.svg" alt="" />
+            </div>
+            <div class="job-detail-info">
+              <div class="job-detail-label">Modalidade</div>
+              <div class="job-detail-value">100% Remoto</div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="job-detail-item">
+            <div class="job-detail-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/invoice.svg" alt="" />
+            </div>
+            <div class="job-detail-info">
+              <div class="job-detail-label">Contrato</div>
+              <div class="job-detail-value">CLT</div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="job-detail-item">
+            <div class="job-detail-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/map-pin.svg" alt="" />
+            </div>
+            <div class="job-detail-info">
+              <div class="job-detail-label">Localização</div>
+              <div class="job-detail-value">Brasil</div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="job-detail-item">
+            <div class="job-detail-icon">
+              <img src="../.claude/skills/dgenny-branding/asset/icones/icones-ui/clock.svg" alt="" />
+            </div>
+            <div class="job-detail-info">
+              <div class="job-detail-label">Publicado em</div>
+              <div class="job-detail-value">Maio de 2026</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SHARE -->
+      <div class="sidebar-card" style="padding: 20px;">
+        <p class="share-label">Compartilhar vaga</p>
+        <div class="share-btns">
+          <a
+            href="https://www.linkedin.com/sharing/share-offsite/?url=https://dgenny.com.br/vagas/customer-success"
+            target="_blank"
+            rel="noopener"
+            class="share-btn share-btn-linkedin"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://wa.me/?text=Vaga%20aberta%20na%20dgenny%C2%AE%20%E2%80%94%20Analista%20de%20Customer%20Success%20(100%25%20remoto)%20%F0%9F%9A%80"
+            target="_blank"
+            rel="noopener"
+            class="share-btn share-btn-whatsapp"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <div class="bottom-cta-inner">
+      <img
+        src="../.claude/skills/dgenny-branding/asset/logo/SVG/1-dgenny_Logotipo_Principal.svg"
+        alt="dgenny®"
+        class="logo"
+      />
+      <h2>O crescimento deixa de ser acaso<br />e passa a ser escolha.</h2>
+      <p>Venha construir esse futuro com a gente.</p>
+      <a href="#candidatar" class="hero-cta">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Candidatar-se agora
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      &copy; 2026 dgenny®. Todos os direitos reservados.
+      &nbsp;·&nbsp;
+      <a href="mailto:vagas@dgenny.com.br">vagas@dgenny.com.br</a>
+      &nbsp;·&nbsp;
+      <a href="https://dgenny.com.br" target="_blank" rel="noopener">dgenny.com.br</a>
+    </p>
+  </footer>
+
+</body>
+</html>
