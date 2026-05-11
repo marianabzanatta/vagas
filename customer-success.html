@@ -1018,17 +1018,6 @@
                 </select>
               </div>
 
-              <div class="form-group">
-                <label>Por que quer trabalhar na dgenny? <span>*</span></label>
-                <textarea id="motivacao" placeholder="Conte um pouco sobre sua motivação e o que te conecta com a missão da dgenny..." required></textarea>
-              </div>
-
-              <div class="form-group">
-                <label>Currículo (PDF) <span>*</span></label>
-                <input type="file" id="curriculo" accept=".pdf,.doc,.docx" required />
-                <span class="form-hint">Formatos aceitos: PDF, DOC, DOCX · Máximo 5MB</span>
-              </div>
-
               <button type="submit" class="form-submit" id="btn-submit">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1061,20 +1050,13 @@
             btn.disabled = true;
             btn.textContent = 'Enviando…';
 
-            const arquivo = document.getElementById('curriculo').files[0];
-            const base64  = arquivo ? await toBase64(arquivo) : null;
-
             const payload = {
               nome:        document.getElementById('nome').value,
               email:       document.getElementById('email').value,
               whatsapp:    document.getElementById('whatsapp').value,
               cidade:      document.getElementById('cidade').value,
               linkedin:    document.getElementById('linkedin').value,
-              experiencia: document.getElementById('experiencia').value,
-              motivacao:   document.getElementById('motivacao').value,
-              curriculo_nome: arquivo ? arquivo.name : '',
-              curriculo_base64: base64,
-              curriculo_tipo:   arquivo ? arquivo.type : ''
+              experiencia: document.getElementById('experiencia').value
             };
 
             try {
