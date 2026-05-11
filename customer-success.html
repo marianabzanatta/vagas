@@ -33,7 +33,10 @@
       background: var(--gray-50);
       color: var(--azul);
       line-height: 1.65;
+      overflow-x: hidden;
     }
+
+    *, *::before, *::after { max-width: 100%; }
 
     /* ── HEADER ───────────────────────── */
     .site-header {
@@ -189,15 +192,20 @@
 
     @media (max-width: 780px) {
       .page-wrapper {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         padding: 24px 16px 60px;
         gap: 20px;
-      }
-      .sidebar {
-        order: -1;
-        position: static;
         width: 100%;
+        box-sizing: border-box;
       }
+      .main-content,
+      .sidebar {
+        width: 100%;
+        min-width: 0;
+        position: static;
+      }
+      .sidebar { order: -1; }
     }
 
     /* ── CARDS ────────────────────────── */
